@@ -333,6 +333,9 @@ body {
 
 /* Center icons on mobile and tablet screens */
 @media (max-width: 991px) {
+    .home-img {
+        margin: 120px;
+    }
 
     .hero {
         height: auto;
@@ -431,6 +434,10 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
 
+    .home-img {
+        margin: 100px;
+    }
+    
     .about-section-bg {
         height: auto;
     }
