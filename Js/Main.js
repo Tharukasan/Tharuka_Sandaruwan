@@ -153,7 +153,7 @@ window.onclick = function(event) {
 
 //CV download
 function openCv() {
-    window.open('cv.PNG', '_blank');
+    window.open('Assets/Tharuka New CV 2024.pdf', '_blank');
 }
 
 
