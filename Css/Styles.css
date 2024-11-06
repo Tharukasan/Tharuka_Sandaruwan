@@ -269,7 +269,7 @@ body {
 @media (max-width: 820px) {
 
     .home-img {
-        margin-left: 200px;
+        margin: auto;
         width: 280px;
         height: 280px;
     }
@@ -280,7 +280,7 @@ body {
         font-size: 50px;
     }
     .home-img {
-        margin-left: 200px;
+        margin: auto;
         width: 280px;
         height: 280px;
     }
@@ -343,7 +343,7 @@ body {
 /* Center icons on mobile and tablet screens */
 @media (max-width: 991px) {
     .home-img {
-        margin: 120px;
+        margin: auto;
     }
 
     .hero {
@@ -444,7 +444,7 @@ body {
 @media (max-width: 768px) {
 
     .home-img {
-        margin-left: 30px;
+        margin: auto;
         width: 280px;
         height: 280px;
     }
