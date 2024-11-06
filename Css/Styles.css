@@ -266,6 +266,15 @@ body {
     height: 1024px;
 }
 
+@media (max-width: 820px) {
+
+    .home-img {
+        margin-left: 200px;
+        width: 280px;
+        height: 280px;
+    }
+}
+
 @media (max-width: 991px) {
     .home h1 {
         font-size: 50px;
