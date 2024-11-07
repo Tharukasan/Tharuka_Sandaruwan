@@ -207,3 +207,22 @@ window.onload = function() {
     }, 2000); // Delay for the fade-in effect of the name
 };
 
+
+
+// Initialize EmailJS with your User ID
+  emailjs.init("CFM5E0Bf8yzRk_3Md");
+
+  // Function to handle form submission
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Send form data via EmailJS
+    emailjs.sendForm("2003TS24pp", "template_nrpfzhs", this)
+      .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Message sent successfully!"); // Success notification
+      }, function(error) {
+        console.error("FAILED...", error);
+        alert("Oops! Something went wrong."); // Error notification
+      });
+  });
