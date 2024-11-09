@@ -208,7 +208,6 @@ window.onload = function() {
 };
 
 
-
 // Initialize EmailJS with your User ID
 (function() {
     emailjs.init("t49QaOVVnFqTYGwnL"); // Ensure this is your correct User ID
@@ -230,3 +229,4 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             alert('Oops! Something went wrong, please try again.');
         });
 });
+;
