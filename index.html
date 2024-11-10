@@ -336,26 +336,39 @@
 
 
 
-   <!-- Contact Me Section -->
+   <!--Contact Me Section-->
 <section id="contact" class="contact-section">
     <h2 class="contact-title">Get In Touch</h2>
     <div class="contact-form-container">
         <h3 class="form-heading">Touch Me</h3>
-        <form id="contact-form" class="contact-form">
+        <form action="https://formspree.io/f/mgveyeod" method="POST" class="contact-form">
             <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Enter Your Name" required>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Enter Your Email" required>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
 
             <label for="message">Your Message</label>
-            <textarea id="message" rows="4" placeholder="Enter Your Message" required></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Enter Your Message" required></textarea>
 
             <button type="submit" class="submit-btn">Submit</button>
         </form>
     </div>
-    <hr class="hr-1">
+
+    <!-- Google Map Embed -->
+    <div class="map-container">
+        <h3 class="map-heading">Our Location</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.953589217125!2d-122.08424998441833!3d37.42206597982225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbba465f4000b%3A0x0!2zMzcjMjUnMTkuNCJOIDEyMsKwMDUnMDUuNiJX!5e0!3m2!1sen!2sus!4v1633825069748!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
 </section>
+
 
 
 
