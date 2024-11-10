@@ -208,25 +208,31 @@ window.onload = function() {
 };
 
 
-// Initialize EmailJS with your User ID
+// Initialize EmailJS with your user ID
 (function() {
-    emailjs.init("t49QaOVVnFqTYGwnL"); // Ensure this is your correct User ID
+    emailjs.init("t49QaOVVnFqTYGwnL");
 })();
 
-// Event listener for form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+// Handle form submission
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
 
-    // Send form data via EmailJS
-    emailjs.sendForm('service_97irk4s', 'template_nrpfzhs', this)  // service_97irk4s is your Service ID, template_nrpfzhs is your Template ID
+    // Collect form data
+    const formData = {
+        from_name: document.getElementById("name").value,
+        reply_to: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    // Send email using EmailJS
+    emailjs.send("service_97irk4s", "template_nrpfzhs", formData)
         .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Your message has been sent successfully!');
-            // Optionally clear the form after successful submission
-            document.getElementById('contact-form').reset();
+            console.log("SUCCESS!", response.status, response.text);
+            alert("Your message has been sent successfully!");
+            // Clear the form
+            document.getElementById("contact-form").reset();
         }, function(error) {
-            console.log('FAILED...', error);
-            alert('Oops! Something went wrong, please try again.');
+            console.log("FAILED...", error);
+            alert("Oops! Something went wrong. Please try again.");
         });
 });
-;
