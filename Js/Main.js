@@ -208,32 +208,4 @@ window.onload = function() {
 };
 
 
-// Initialize EmailJS with your user ID
-(function() {
-    emailjs.init("GVzq6yhm0vj3eKSbO");
-})();
-
-// Handle form submission
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-
-    // Collect form data
-    const formData = {
-        from_name: document.getElementById("name").value,
-        reply_to: document.getElementById("email").value,
-        message: document.getElementById("message").value
-    };
-
-    // Send email using EmailJS
-    emailjs.send("service_23vccmc", "template_eqpx2ml", formData)
-        .then(function(response) {
-            console.log("SUCCESS!", response.status, response.text);
-            alert("Your message has been sent successfully!");
-            // Clear the form
-            document.getElementById("contact-form").reset();
-        }, function(error) {
-            console.log("FAILED...", error); // Log the error details
-            alert("Oops! Something went wrong, please try again.");
-        });
-});
 
