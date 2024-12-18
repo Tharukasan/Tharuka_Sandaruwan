@@ -157,6 +157,28 @@ window.onclick = function(event) {
 };
 
 
+document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+    
+    if (response.ok) {
+        alert('Thank you! Your message has been sent.');
+        form.reset();
+    } else {
+        alert('Oops! Something went wrong, please try again.');
+    }
+});
+
 //CV download
 function openCv() {
     window.open('Assets/Tharuka Sandaruwan CV 2024.pdf', '_blank');
